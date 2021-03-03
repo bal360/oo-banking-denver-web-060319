@@ -1,6 +1,10 @@
+require 'pry'
+
 class BankAccount
     attr_accessor :balance, :status
     attr_reader :name
+
+  @@all = []
 
     def initialize(name)
         @name = name
@@ -24,3 +28,5 @@ class BankAccount
         self.status = "closed"
     end
 end
+
+binding.pry
